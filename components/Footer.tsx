@@ -1,5 +1,6 @@
 import { Phone, Clock, MapPin, Instagram } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { siteConfig } from '@/config/site';
 
@@ -16,8 +17,8 @@ export default function Footer() {
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                     {/* Brand Column */}
                     <div>
-                        <Link href="/" className="text-2xl font-bold text-[var(--accent)] mb-4 block">
-                            {siteConfig.name}
+                        <Link href="#hero">
+                            <Image src="/images/logo-laundry.png" alt="Logo" width={150} height={150} />
                         </Link>
                         <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                             Laundry kiloan di Yogyakarta. Antar-jemput, tepat waktu, wangi tahan lama.
@@ -105,7 +106,7 @@ export default function Footer() {
                         © {currentYear} {siteConfig.name}. Hak cipta dilindungi.
                     </p>
                     <p className="text-gray-500 text-sm">
-                        Dibuat dengan 💚 di Yogyakarta
+                        Dibuat di Yogyakarta
                     </p>
                 </div>
             </div>
