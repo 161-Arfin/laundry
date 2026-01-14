@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,6 +16,27 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isOpen &&
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,7 +68,7 @@ export default function Navbar() {
 
     return (
         <header
-            className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent backdrop-blur-sm shadow-sm"
+            className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent backdrop-blur-xs shadow-sm"
 
         >
             <nav className="container-custom" aria-label="Main navigation">
@@ -70,8 +91,8 @@ export default function Navbar() {
                             <li key={link.href}>
                                 <a
                                     href={link.href}
-                                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors ${activeSection === link.href.replace('#', '')
-                                        ? 'bg-[var(--accent-light)] text-[var(--accent)] border-1 border-[var(--accent)]'
+                                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeSection === link.href.replace('#', '')
+                                        ? 'bg-[var(--accent-light)] text-[var(--foreground)] border-1 border-[var(--accent)]'
                                         : 'text-[var(--foreground)] hover:bg-gray-100'
                                         }`}
                                 >
@@ -95,6 +116,7 @@ export default function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
+                        ref={buttonRef}
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
                         aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
@@ -106,15 +128,15 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
+                    <div ref={menuRef} className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t-1">
                         <ul className="py-4 px-4 space-y-2">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
                                     <a
                                         href={link.href}
                                         onClick={handleLinkClick}
-                                        className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${activeSection === link.href.replace('#', '')
-                                            ? 'bg-[var(--accent-light)] text-[var(--accent)]'
+                                        className={`block px-4 py-3 rounded-full text-base font-medium transition-colors ${activeSection === link.href.replace('#', '')
+                                            ? 'bg-[var(--accent-light)] text-[var(--foreground)] border-1 border-[var(--accent)]'
                                             : 'text-[var(--foreground)] hover:bg-gray-100'
                                             }`}
                                     >
