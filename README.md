@@ -1,61 +1,61 @@
-# Laundryku - SME Laundry Landing Page Template
+# Laundryku - Template Landing Page Laundry UMKM
 
-A premium, high-performance landing page template designed specifically for laundry businesses. Built with **Next.js 15**, **React 19**, **Tailwind CSS 4**, and **TypeScript**.
+Template landing page premium dengan performa tinggi yang dirancang khusus untuk bisnis laundry. Dibangun dengan **Next.js 15**, **React 19**, **Tailwind CSS 4**, dan **TypeScript**.
 
-![Laundryku Preview](/public/images/hero-laundry.jpg)
+![Preview Laundryku](/public/images/hero-laundry.jpg)
 
-## Features
+## Fitur
 
-- ⚡ **High Performance**: Built on Next.js 15 (App Router) for blazing fast load times.
-- 📱 **Mobile First**: Fully responsive design that looks great on all devices.
-- 🎨 **Modern Design**: Clean, professional UI with smooth animations.
-- 🛠 **Easy Configuration**: Centralized config file (`config/site.ts`) to manage content.
-- 🔍 **SEO Optimized**: Built-in metadata management for better search engine visibility.
-- 📞 **Conversion Focused**: Integrated WhatsApp call-to-actions.
+- ⚡ **Performa Tinggi**: Dibangun di atas Next.js 15 (App Router) untuk waktu muat yang super cepat.
+- 📱 **Mobile First**: Desain responsif sepenuhnya yang terlihat bagus di semua perangkat.
+- 🎨 **Desain Modern**: UI bersih dan profesional dengan animasi halus.
+- 🛠 **Konfigurasi Mudah**: File konfigurasi terpusat (`config/site.ts`) untuk mengelola konten.
+- 🔍 **Optimasi SEO**: Manajemen metadata bawaan untuk visibilitas mesin pencari yang lebih baik.
+- 📞 **Fokus Konversi**: Call-to-action WhatsApp yang terintegrasi.
 
-## Getting Started
+## Cara Memulai
 
-### Prerequisites
+### Prasyarat
 
-- Node.js 18+ installed on your machine.
+- Node.js 18+ terinstal di komputer Anda.
 
-### Installation
+### Instalasi
 
-1. Clone the repository:
+1. Clone repositori:
    ```bash
-   git clone https://github.com/yourusername/laundryku.git
+   git clone https://github.com/usernameanda/laundryku.git
    cd laundryku
    ```
 
-2. Install dependencies:
+2. Instal dependensi:
    ```bash
    npm install
    ```
 
-3. Run the development server:
+3. Jalankan server pengembangan:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the site.
+4. Buka [http://localhost:3000](http://localhost:3000) untuk melihat situs.
 
-## Configuration
+## Konfigurasi
 
-This template is designed to be easily customized without touching the core code. 
+Template ini dirancang agar mudah disesuaikan tanpa menyentuh kode inti.
 
-**Main Config File**: [`config/site.ts`](config/site.ts)
+**File Konfigurasi Utama**: [`config/site.ts`](config/site.ts)
 
-Here you can edit:
-- **Business Info**: Name, Phone, Address, WhatsApp message.
-- **Pricing**: Add/Edit/Remove laundry packages.
-- **Navigation**: Change menu links.
-- **Metadata**: Update SEO titles and descriptions.
+Di sini Anda dapat mengedit:
+- **Info Bisnis**: Nama, Telepon, Alamat, Pesan WhatsApp.
+- **Harga**: Tambah/Edit/Hapus paket laundry.
+- **Navigasi**: Ubah link menu.
+- **Metadata**: Perbarui judul dan deskripsi SEO.
 
-Example `config/site.ts`:
+Contoh `config/site.ts`:
 
 ```typescript
 export const siteConfig = {
-    name: "My Laundry",
+    name: "Laundryku",
     business: {
         phone: "628123456789",
         address: "Jl. Merdeka No. 10",
@@ -67,12 +67,12 @@ export const siteConfig = {
 
 ## Deployment
 
-The easiest way to deploy is using [Vercel](https://vercel.com):
+Cara termudah untuk deploy adalah menggunakan [Vercel](https://vercel.com):
 
-1. Push your code to GitHub.
-2. Import the project in Vercel.
+1. Push kode Anda ke GitHub.
+2. Impor proyek di Vercel.
 3. Deploy!
 
-## License
+## Lisensi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.

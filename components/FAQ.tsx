@@ -26,11 +26,11 @@ const faqs = [
     },
     {
         question: 'Jadwal jemput bisa kapan aja?',
-        answer: 'Jam operasional kami 08.00–20.00 WIB. Tinggal bilang mau dijemput jam berapa, kami usahakan datang sesuai waktu. Kalau mendadak, minimal kabarin 30 menit sebelumnya.',
+        answer: 'Jam operasional kami 08.00-20.00 WIB. Tinggal bilang mau dijemput jam berapa, kami usahakan datang sesuai waktu. Kalau mendadak, minimal kabarin 30 menit sebelumnya.',
     },
     {
         question: 'Bisa cuci selimut/bed cover nggak?',
-        answer: 'Bisa banget. Selimut, bed cover, sprei—semua kami terima. Dihitung per kg sama kayak baju biasa. Kalau barang gede banget kayak karpet, chat dulu ya biar kami kasih estimasi.',
+        answer: 'Bisa pastinya. Selimut, bed cover, sprei—semua kami terima. Tapi dihitung per barang. Kalau barang gede banget kayak karpet, chat dulu ya biar kami kasih estimasi.',
     },
 ];
 
