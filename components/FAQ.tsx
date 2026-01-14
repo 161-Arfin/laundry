@@ -6,7 +6,7 @@ import { ChevronDown, Plus, Minus } from 'lucide-react';
 const faqs = [
     {
         question: 'Minimal order berapa kg?',
-        answer: 'Untuk paket Reguler minimal 3 kg, sedangkan Express dan Super Express minimal 2 kg. Kalau kurang dari itu, tetap dihitung sesuai minimal ya.',
+        answer: 'Untuk paket Reguler minimal 1 kg, sedangkan Express dan Super Express minimal 3 kg. Kalau kurang dari itu, tetap dihitung sesuai minimal ya.',
     },
     {
         question: 'Layanan express tersedia setiap hari?',
