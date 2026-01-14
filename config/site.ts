@@ -1,0 +1,112 @@
+import { Check, Star, MessageCircle } from 'lucide-react';
+
+export const siteConfig = {
+    name: "Laundryku",
+    description: "Laundry kiloan di Yogyakarta dengan antar-jemput gratis. Tersedia paket Reguler (3 hari), Express (24 jam), dan Super Express (6 jam).",
+    url: "https://laundryku.id",
+    keywords: ["laundry jogja", "laundry kiloan yogyakarta", "laundry antar jemput jogja", "laundry seturan", "laundry gejayan", "laundry express jogja"],
+    authors: [{ name: "Laundryku" }],
+    creator: "Laundryku",
+    headerTitle: "Laundryku - Laundry Kiloan Jogja | Antar Jemput Gratis, Express Selesai <24 jam",
+    business: {
+        phone: "6292973923929",
+        formattedPhone: "+62 929-7392-3929",
+        whatsappMessage: encodeURIComponent("Halo Laundryku, saya mau tanya dong"),
+        address: "Seturan, Gejayan, Condongcatur, Babarsari, Pogung & sekitarnya",
+        googleMapsUrl: "https://maps.google.com",
+        instagram: "https://instagram.com",
+        hours: "08.00 – 20.00 WIB (Setiap Hari)",
+    },
+    navLinks: [
+        { href: '#hero', label: 'Home' },
+        { href: '#cara-order', label: 'Cara Order' },
+        { href: '#harga', label: 'Harga' },
+        { href: '#area', label: 'Area' },
+        { href: '#testimoni', label: 'Testimoni' },
+        { href: '#faq', label: 'FAQ' },
+    ],
+    pricing: [
+        {
+            name: 'Reguler',
+            time: '3 hari',
+            price: '7.000',
+            priceNote: '/kg',
+            minWeight: 'Min. 1 kg',
+            features: [
+                'Cuci + setrika + lipat rapi',
+                'Pewangi standar include',
+                'Antar-jemput gratis (radius 5km)',
+                'Notifikasi WA saat selesai',
+            ],
+            popular: false,
+            ctaMessage: encodeURIComponent('Halo, saya mau order paket Reguler (3 hari). Alamat saya di...'),
+            color: 'border-gray-200',
+        },
+        {
+            name: 'Express',
+            time: '24 jam',
+            price: '15.000',
+            priceNote: '/kg',
+            minWeight: 'Min. 3 kg',
+            features: [
+                'Cuci + setrika + lipat rapi',
+                'Pewangi premium include',
+                'Antar-jemput gratis (radius 5km)',
+                'Prioritas antrian',
+                'Notifikasi WA saat selesai',
+            ],
+            popular: true,
+            ctaMessage: encodeURIComponent('Halo, saya mau order paket Express (24 jam). Alamat saya di...'),
+            color: 'border-[var(--accent)]',
+        },
+        {
+            name: 'Super Express',
+            time: '6 jam',
+            price: '23.000',
+            priceNote: '/kg',
+            minWeight: 'Min. 3 kg',
+            features: [
+                'Cuci + setrika + lipat rapi',
+                'Pilihan pewangi premium',
+                'Antar-jemput gratis (radius 5km)',
+                'Antrian paling depan',
+                'Update progres via WA',
+            ],
+            popular: false,
+            ctaMessage: encodeURIComponent('Halo, saya butuh Super Express (6 jam). Bisa dijemput sekarang? Alamat saya di...'),
+            color: 'border-gray-200',
+        },
+    ],
+
+    testimonials: [
+        {
+            name: 'Dinda',
+            location: 'Seturan',
+            rating: 5,
+            text: 'Baru pertama coba, eh beneran 12 jam udah nyampe. Kirain lebay doang tulisan "tepat waktu"nya. Recommended buat anak kos yang males nyuci.',
+            avatar: 'D',
+        },
+        {
+            name: 'Mas Budi',
+            location: 'Gejayan',
+            rating: 5,
+            text: 'Wanginya tuh enak, nggak nyengat kayak laundry biasa. Udah 3 bulan langganan, nggak pernah telat.',
+            avatar: 'B',
+        },
+        {
+            name: 'Mbak Ratna',
+            location: 'Pogung',
+            rating: 4,
+            text: 'Harganya masuk akal buat mahasiswa. Yang penting rapi lipatannya, nggak asal. Cuma kadang kurirnya agak lama kalo sore.',
+            avatar: 'R',
+        },
+        {
+            name: 'Pak Hendra',
+            location: 'Condongcatur',
+            rating: 5,
+            text: 'Sekeluarga udah pake ini. Praktis, tinggal chat, dijemput, selesai. Kurirnya ramah juga.',
+            avatar: 'H',
+        },
+    ]
+
+};
